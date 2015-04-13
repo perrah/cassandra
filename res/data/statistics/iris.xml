@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+			<statistics>
+				<information>
+					<relation></relation>
+					<instances>150</instances>
+					<attribute_count>5</attribute_count>
+					<classifier>Default</classifier>
+				</information>
+				<attributes><attribute>
+			<name>Sepal length</name>
+			<missing>0</missing>
+			<distinct>35</distinct>
+			<unique>9</unique>
+			<minimum>4.3</minimum>
+			<maximum>7.9</maximum>
+			<mean>5.843</mean>
+			<graph_categories>4.3-4.577,4.577-4.854,4.854-5.131,5.131-5.408,5.408-5.685,5.685-5.962,5.962-6.239,6.239-6.516,6.516-6.793,6.793-7.070,7.070-7.347,7.347-7.624,7.624-7.9</graph_categories>
+			<graph_values>1,4,11,25,11,13,18,16,21,10,8,5,2,5</graph_values>
+		</attribute><attribute>
+			<name>Sepal width</name>
+			<missing>0</missing>
+			<distinct>23</distinct>
+			<unique>5</unique>
+			<minimum>2.0</minimum>
+			<maximum>4.4</maximum>
+			<mean>3.054</mean>
+			<graph_categories>2.0-2.185,2.185-2.370,2.370-2.555,2.555-2.740,2.740-2.925,2.925-3.110,3.110-3.295,3.295-3.480,3.480-3.665,3.665-3.850,3.850-4.035,4.035-4.220,4.220-4.4</graph_categories>
+			<graph_values>1,0,7,11,14,24,38,13,18,9,9,3,2,1</graph_values>
+		</attribute><attribute>
+			<name> Petal length</name>
+			<missing>0</missing>
+			<distinct>43</distinct>
+			<unique>10</unique>
+			<minimum>1.0</minimum>
+			<maximum>6.9</maximum>
+			<mean>3.759</mean>
+			<graph_categories>1.0-1.454,1.454-1.908,1.908-2.362,2.362-2.816,2.816-3.270,3.270-3.724,3.724-4.178,4.178-4.632,4.632-5.086,5.086-5.540,5.540-5.994,5.994-6.448,6.448-6.9</graph_categories>
+			<graph_values>1,22,27,0,0,1,6,12,21,18,17,14,7,4</graph_values>
+		</attribute><attribute>
+			<name> Petal width</name>
+			<missing>0</missing>
+			<distinct>22</distinct>
+			<unique>2</unique>
+			<minimum>0.1</minimum>
+			<maximum>2.5</maximum>
+			<mean>1.199</mean>
+			<graph_categories>0.1-0.285,0.285-0.470,0.470-0.655,0.655-0.840,0.840-1.025,1.025-1.210,1.210-1.395,1.395-1.580,1.580-1.765,1.765-1.950,1.950-2.135,2.135-2.320,2.320-2.5</graph_categories>
+			<graph_values>6,28,14,2,0,7,8,13,20,6,17,12,11,6</graph_values>
+		</attribute></attributes></statistics>
