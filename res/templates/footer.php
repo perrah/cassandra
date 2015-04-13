@@ -3,7 +3,7 @@
 	<?php require_once(TEMPLATES_PATH.'/modals.php'); ?>
 	
 	<!-- FOOTER -->
-	<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+
 	<footer class="footer">
 	  <div class="container">
 		<p></p>
@@ -11,7 +11,7 @@
 		<p>&copy; 2015 Cassandra. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
 	  </div>
 	</footer>
-	</nav>
+	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="<?php echo PUBLIC_PATH ?>/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
