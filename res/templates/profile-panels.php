@@ -9,13 +9,13 @@
 							<div class="form-group">
 								  <label for="user_name">Username</label>
 								  <div class="input-group">
-									<input type="text" class="form-control" id="user_name" placeholder="admin" readonly>
+									<input type="text" class="form-control" id="user_name" placeholder="'.$user_info['username'].'" readonly>
 									 <span class="input-group-addon"><a href="?page=settings">Change Password</a></span>
 								  </div>
 							</div>
 							<div class="form-group">
 								<label for="user_email">Email address</label>
-								<input type="email" class="form-control" id="user_email" value="perryjsteward@gmail.com">
+								<input type="email" class="form-control" id="user_email" value="'.$user_info['email'].'">
 							</div>
 							<div class="form-group">
 								<label for="company">Company</label>

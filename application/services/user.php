@@ -110,7 +110,6 @@ class User {
 
 	public function _start($db,$array){
 		//start user session
-		//THIS NEEDS CHANGING
 		//obtain information of inserted user and set session variables
 		$result = $db->query("select * from users where username = '".$array['username']."' AND password = '".$array['password']."'");
 		$row = mysqli_fetch_array($result['result']);
@@ -131,20 +130,59 @@ class User {
 		return true;
 	}
 
+	//displays the page that has been selected in the profile page.
 	public function viewProfile($page) {
-		$views = include(TEMPLATES_PATH.'/profile-panels.php');
+		$db = new Database ();
+		$db->connect();
+		$result = $db->query('SELECT * FROM users WHERE user_id="'.$_SESSION['user_id'].'"');
+		$user_info = mysqli_fetch_array($result['result']);
+		$views = include(TEMPLATES_PATH.'/profile-panels.php');//a template hold the different views available and is returned in an array
 		switch($page){
-			case 'user':
+			case 'user': //echos user details and email preferences
 				echo $views['public_profile'];
 				echo $views['email_preferences'];
 				break;
-			case 'tasks':
+			case 'tasks': //views all the tasks the user has performed uses internal method to query database
+				$this->viewTasks();
 				break;
-			case 'settings':
+			case 'settings': //displays setting for changing password and deleting a profile
 				echo $views['change_password'];
 				echo $views['delete_profile'];
 				break;
 		}//end switch
+	}
+	
+	//method calls the database to view all the tasks the user has peformed
+	public function viewTasks(){
+		$db = new Database();
+		$db->connect();
+		$result = $db->query('SELECT * FROM task_log WHERE user_id ="'.$_SESSION['user_id'].'"');
+		$tasks = mysqli_fetch_all($result['result']);
+		echo '<div class="panel panel-default">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Task ID</th>
+					<th>Description</th>
+					<th>Resource Type</th>
+					<th>Date</th>
+					<th>Duration</th>
+					<th>Size</th>
+					<th>Status</th>
+				</tr>
+			</thead>';
+		foreach($tasks as $task){
+			echo '<tr>
+				<td>'.$task[0].'</td>
+				<td>'.$task[6].'</td>
+				<td>'.$task[2].'</td>
+				<td>'.$task[3].'</td>
+				<td>'.$task[4].'</td>
+				<td>'.$task[7].'</td>
+				<td>'.$task[5].'</td>
+			</tr>';
+		}
+		echo '</table></div>';
 	}
 
 	
