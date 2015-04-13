@@ -131,8 +131,20 @@ class User {
 		return true;
 	}
 
-	public function viewUser($id) {
-		//echo $id;
+	public function viewProfile($page) {
+		$views = include(TEMPLATES_PATH.'/profile-panels.php');
+		switch($page){
+			case 'user':
+				echo $views['public_profile'];
+				echo $views['email_preferences'];
+				break;
+			case 'tasks':
+				break;
+			case 'settings':
+				echo $views['change_password'];
+				echo $views['delete_profile'];
+				break;
+		}//end switch
 	}
 
 	
