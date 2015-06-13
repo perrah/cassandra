@@ -32,13 +32,13 @@ Anaconda Tests: To test that anaconda has succesfully installed
 
 1. Open cmd and type `python` to execute python. The print out should read an Anaconda about `ctrl + z` to exit
 2. Create a `simple_tree.py` file containing the following:
-`from sklearn import tree
+```from sklearn import tree
 X = [[0, 0], [1, 1]]
 Y = [0, 1]
 clf = tree.DecisionTreeClassifier()
 clf = clf.fit(X, Y)
 
-print(clf.predict([[2., 2.]]))`
+print(clf.predict([[2., 2.]]))```
 3. In cmd change to the file directory and type `python simple_tree.py`
 4. `[1]` should be returned 
 
